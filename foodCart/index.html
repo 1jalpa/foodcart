@@ -1,0 +1,218 @@
+<html>
+<head>
+	<title>Food-Order</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+			$(function(){
+				$("#adddish").click(function(){
+					$("#dish option:selected").appendTo($("#mydish"));
+				})
+				
+				$("#removedish").click(function(){
+					$("#mydish option:selected").remove().appendTo($("#dish"));
+				})
+
+
+
+			});
+		</script>
+	
+</head>
+<body>
+	<div class="row">
+		<div class="col-12 col-xl-12">
+			<div class="row">
+				<img src="img/main1.jpg" height="550px" width="100%">
+				<div class="top">
+					<ul class="nav justify-content-end">
+					    <li class="nav-item">
+					      <a class="nav-link mr-3 ml-3" href="#">About</a>
+					    </li>
+					    <li class="nav-item">
+					      <a class="nav-link mr-3 ml-3" href="#">Our Food</a>
+					    </li>
+					    <li class="nav-item">
+					      <a class="nav-link mr-3 ml-3" href="#">Plan</a>
+					    </li>
+					    <li class="nav-item">
+					      <a class="nav-link mr-3 ml-3 contact" href="#" style=" ">ContactUs</a>
+					    </li>
+  					</ul>
+				</div>
+				<div class="top-left">
+					<p>Have no time to prepare <span style="color: #F8A22F;">food</span>  ?</p>
+					<p class="text-muted" style="font-size: 14px;">
+						Choose one of our plans, enter delivery time <br> and enjoy delicious food without leaving your home.
+					</p>
+					<button class="btn_order">Order Now</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-5 col-xl-5">
+				<div class="card" style="border-radius: 20px;">
+					<div class="card-body" >
+						<h4 class="text-center">Add to cart</h4><hr>
+
+
+						<div class="row">
+								<div class="col-4 col-xl-3">
+									<img src="img/pizza.jpg" height="80px">
+								</div>
+
+								<div class="col-4 col-xl-5">
+									<label class="mt-3 pl-2">Pizza</label>
+								</div>
+
+								<div class="col-4 col-xl-4">
+									<label class="mt-3">$15</label>
+								</div>
+							</div>
+
+							<hr>
+
+							<div class="row">
+								<div class="col-4 col-xl-3">
+									<img src="img/maggi.jpg" height="80px">
+								</div>
+								<div class="col-4 col-xl-5">
+									<label class="mt-3 pl-2">Maggi</label>
+								</div>
+								<div class="col-4 col-xl-4">
+									<label class="mt-3">$8</label>
+								</div>
+							</div>
+
+							<hr>
+
+							<div class="row">
+								<div class="col-4 col-xl-3">
+									<img src="img/pasta.jpg" height="80px">
+								</div>
+								<div class="col-4 col-xl-5">
+									<label class="mt-3 pl-2">Pasta</label>
+								</div>
+								<div class="col-4 col-xl-4">
+									<label class="mt-3">$12</label>
+								</div>
+							</div>
+
+							<hr>
+
+							<div class="row">
+								<div class="col-4 col-xl-3">
+									<img src="img/burgar.jpg" height="80px">
+								</div>
+								<div class="col-4 col-xl-5">
+									<label class="mt-3 pl-2">Burger</label>
+								</div>
+								<div class="col-4 col-xl-4">
+									<label class="mt-3">$10</label>
+								</div>
+							</div>
+
+							<hr>
+
+							<div class="row">
+								<div class="col-4 col-xl-3">
+									<img src="img/dosa.jpg" height="80px">
+								</div>
+								<div class="col-4 col-xl-5">
+									<label class="mt-3 pl-2">Dosa</label>
+								</div>
+								<div class="col-4 col-xl-4">
+									<label class="mt-3">$5</label>
+								</div>
+							</div>
+							
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-2 col-xl-2 mt-5 text-center">
+				<button type="button" id="adddish" class="btn btn-outline-warning mt-5" style="border-radius: 20px;">Add to cart</button> <br>
+				<button type="button" id="removedish" class="btn btn-outline-warning mt-5"style="border-radius: 20px;">Remove to cart</button>
+			</div>
+
+
+			<div class="col-5 col-xl-5">
+				<div class="card" style="border-radius: 20px;">
+					<div class="card-body">
+						<h4 class="text-center">Add to cart</h4><hr>
+							
+
+							<div class="row">
+								<div class="col-4 col-xl-3">
+									<img src="img/burgar.jpg" height="80px">
+								</div>
+								<div class="col-4 col-xl-5">
+									<label class="mt-3 pl-2">Burger</label>
+								</div>
+								<div class="col-4 col-xl-4">
+									<label class="mt-3">$10</label>
+								</div>
+							</div>
+
+							<hr>
+
+							<div class="row">
+								<div class="col-4 col-xl-3">
+									<img src="img/dosa.jpg" height="80px">
+								</div>
+								<div class="col-4 col-xl-5">
+									<label class="mt-3 pl-2">Dosa</label>
+								</div>
+								<div class="col-4 col-xl-4">
+									<label class="mt-3">$5</label>
+								</div>
+							</div>
+							<hr>
+							<div class="row p-3" style="background-color: #F8A22F;">
+								<div class="col-xl-12">
+									<div class="row">
+										<div class="col-xl-8">
+											<label>Total</label>
+										</div>
+
+										<div class="col-xl-4">
+											<label>$15</label>
+										</div>
+									</div>	
+								</div>
+							</div>
+							
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$('.form-group').on("input", ".prc", function() {
+	    var totalsum = 0;
+	    $('.form-group .prc').each(function(){
+	        var inputval = $(this).val();
+	        if($.isNumeric(inputval)){
+	        	totalsum += parseFloat(inputval);
+	        } 
+	    });
+	    $("#result").text(totalsum);
+            
+	});
+	</script>
+</body>
+</html>

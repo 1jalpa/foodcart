@@ -1,0 +1,42 @@
+body
+{
+	font-family: "Poppins",sans-serif;
+	margin: 0px;
+	overflow-x: hidden;
+	background-color: #fff;
+}
+.top
+{
+	top: 0px;
+	right: 20px;
+	position: absolute;
+	padding: 20px;
+	margin-left:20px;
+	 
+}
+ul li a
+{
+	color: #F8A22F;
+}
+.top-left {
+  position: absolute;
+  top: 130px;
+  left: 70px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+.btn_order
+{
+	border-radius: 20px;
+	color: #fff;
+	background-color: #F8A22F;
+	font-size: 17px;
+	border:1px solid #F8A22F;
+}
+.contact
+{
+	background-color:#F8A22F;
+	 border-radius: 20px;
+	  color: black;
+}

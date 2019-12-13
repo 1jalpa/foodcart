@@ -1,0 +1,63 @@
+<html>
+<head>
+		<title>Add and remove multiple value from the droup down</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<script>
+			$(function(){
+				$("#adddish").click(function(){
+					$("#dish option:selected").appendTo($("#mydish"));
+				})
+				
+				$("#removedish").click(function(){
+					$("#mydish option:selected").remove().appendTo($("#dish"));
+				})
+			});
+		</script>
+		<style>
+			body
+			{
+				margin: 20px;
+			}
+		</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row well">
+			<div class="col-sm-4">
+				<label>Choose your Favourite dish</label> <br>
+				<select value="form-control" id="dish" multiple>
+					<option value="panner">Panner</option>
+					<option value="pulav">Pulav</option>
+					<option value="veg makhanwala">Veg Makhanwala</option>
+					<option value="veg masala">Veg Masala</option>
+					<option value="kaju masala">Kaju Masala</option>
+					<option value="veg kadai">Veg Kadai</option>
+					<option value="aalu fried">Aalu Fried</option>
+					<option value="naan">Naan</option>
+					<option value="roti">Roti</option>
+				</select>
+			</div>
+			
+			<div class="col-sm-4">
+				<button type="button" id="adddish" class="btn btn-success">Add</button> <br> <br>
+				<button type="button" id="removedish" class="btn btn-danger">remove</button> 
+			</div>
+			
+			<div class="col-sm-4">
+				<select class="form-control" multiple id="mydish">
+					<label>Selected Dish</label>
+				</select>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
